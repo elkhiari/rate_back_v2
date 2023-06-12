@@ -45,9 +45,7 @@ const authController = async (req,res) => {
               .status(200)
               .json({ message: 'Login success', token, user: newUser });
           }
-        console.log(access_token)
     } catch (error) {
-        // console.log(error)
         return res.status(500).json({message: 'internal server errorZZ'})
     }
 }
