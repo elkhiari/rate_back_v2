@@ -38,5 +38,14 @@ const countRate = async (req, res) => {
     }
 }
 
+const deleteAll = async (req, res) => {
+    try {
+        const rates = await rateModel.deleteMany();
+        res.status(200).json({ message: 'deleted' });
+    } catch (error) {
+        res.status(500).json({ message: 'internal server error' });
+    }
+}
 
-module.exports = { AddRate, GetAllRate, countRate };
+
+module.exports = { AddRate, GetAllRate, countRate, deleteAll };
