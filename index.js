@@ -9,7 +9,7 @@ const app = express();
 // app.use(cors());
 
 app.use(cors({
-     origin: 'https://rate-v1.vercel.app',
+     origin: '*',
 }));
 
 app.use(express.json());
